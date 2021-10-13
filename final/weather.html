@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <title>Weather - coulibcn</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta author="Christian Coulibaly">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"               integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="               crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+        <link rel="stylesheet" href="style.css">
+        <script src="weather_script.js?rev=1"></script>
+        <script src="index_script.js?rev=1"></script>
+
+
+    </head>
+
+    <body>
+
+        <div class="design"></div>
+        <div id="pageContainer" class="container">
+
+            <div class="row">
+                <div class="col-md-10 offset-md-1">
+                    <!--Navbar-->
+                    <nav class="navbar navbar-expand-lg navbar-dark  indigo darken-2">
+    
+                        <!-- Navbar brand -->
+                        <a class="navbar-brand" href="#">CSE 383 Final Project</a>
+    
+                        <!-- Collapse button -->
+                        <button class="navbar-toggler third-button" type="button" data-toggle="collapse"
+                            data-target="#navbarSupportedContent22" aria-controls="navbarSupportedContent22"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <div class="animated-icon3"><span></span><span></span><span></span></div>
+                        </button>
+    
+                        <!-- Collapsible content -->
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent22">
+    
+                            <!-- Links -->
+                            <ul class="navbar-nav mr-auto">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="latlong.html">Zip to Coordinates</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active" href="weather.html">Weather Widget<span class="sr-only">(current)</span></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="history.html">Weather History</a>
+                                </li>
+                            </ul>
+                            <!-- Links -->
+                        </div>
+                </div>
+                <!-- Collapsible content -->
+            </div>
+            </nav>
+            <!--/.Navbar-->
+
+            <div class="row">
+                <div class="col-md-4 offset-md-4 description">
+                    <br>
+                    <h1 style="color: #151ef5">Weather Widget</h1>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-10 offset-md-1 description">
+                    <form>
+                    <h3 style="margin: auto; padding: 30px;">Enter your Zip Code for a 7 Day Forecast.</h3>
+                    <br>
+
+                    <div class="row">
+                        <div class="col-md-9">
+                            <input class="form-control formInput" type="number" name="zip" id="zip" placeholder="Enter ZIP Code" autofocus required>
+                        </div>
+                        <div class="col-md-3">
+                            <button type="submit" class="btn formInput btn-block form-control" id="go" name="go">Go</button>
+                        </div>
+                    </div>
+
+                    </form>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md description">
+                    <h3 id="WeatherHeader" style="padding: 30px;"></h3>
+                    <br>
+
+                    <div class="row" id="sevenDayWeather" style="margin: auto;">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </body>
+
+</html>

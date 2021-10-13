@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>History - coulibcn</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta author="Christian Coulibaly">
+    
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+            integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+    
+        <link rel="stylesheet" href="style.css">
+        <script src="index_script.js?rev=1"></script>
+        <script src="history_script.js?rev=1"></script>
+    
+    </head>
+
+    <body>
+
+        <div class="design"></div>
+        <div id="pageContainer" class="container">
+
+            <div class="row">
+                <div class="col-md-10 offset-md-1">
+                    <!--Navbar-->
+                    <nav class="navbar navbar-expand-lg navbar-dark  indigo darken-2">
+    
+                        <!-- Navbar brand -->
+                        <a class="navbar-brand" href="index.html">CSE 383 Final Project</a>
+    
+                        <!-- Collapse button -->
+                        <button class="navbar-toggler third-button" type="button" data-toggle="collapse"
+                            data-target="#navbarSupportedContent22" aria-controls="navbarSupportedContent22"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <div class="animated-icon3"><span></span><span></span><span></span></div>
+                        </button>
+    
+                        <!-- Collapsible content -->
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent22">
+    
+                            <!-- Links -->
+                            <ul class="navbar-nav mr-auto">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="index.html">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="latlong.html">Zip to Coordinates</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="weather.html">Weather Widget</a>
+                                </li>
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="history.html">Weather History<span class="sr-only">(current)</span></a>
+                                </li>
+                            </ul>
+                            <!-- Links -->
+                        </div>
+                </div>
+                <!-- Collapsible content -->
+            </div>
+            </nav>
+            <!--/.Navbar-->
+
+            <div class="row">
+                <div class="col-md-10 offset-md-1 description">
+                    <br>
+                    <h1 style="color: #151ef5">Weather Request History</h1>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-10 offset-md-1 description">
+                    <form>
+                    <h3>Please enter a date and choose a sorting method.</h3>
+                    <br>
+
+                    <div class="row">
+                        <div class="col-md-4">
+                            <input class="form-control formInput" type="date" name="date" id="date" placeholder="Enter Date" autofocus required>
+                        </div>
+                        <div class="col-md-4">
+                            <select class="custom-select formInput selectpicker form-control" name="sortType" id="sortType" required>
+                                <option value="" selected disabled>Select from Dropdown</option>
+                                <option value="1">Sort by ZipCode</option>
+                                <option value="2">Sort by Time</option>
+                            </select>
+                        </div>
+                        <div class="col-md-4">
+                            <button type="submit" class="btn formInput btn-block form-control" id="submitButton" name="submitButton">Submit</button>
+                        </div>
+                    </div>
+
+                    </form>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-10 offset-md-1 description">
+                    <div class="row">
+                       <h2 id="loading"></h2>
+                       <p id="jsonResponse"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">location</th>
+                        <th scope="col">date</th>
+                        <th scope="col">dateRequested</th>
+                        <th scope="col">low</th>
+                        <th scope="col">high</th>
+                        <th scope="col">forecast</th>
+                      </tr>
+                    </thead>
+                    <tbody id="historyTable">
+                      <tr>
+                        <th scope="row">ex. location</th>
+                        <th scope="row">ex. date</td>
+                        <td><em>Data Fills Here</em></td>
+                        <td>ex. low</td>
+                        <td>ex. high</td>
+                        <td>ex. forecast</td>
+                      </tr>
+                    </tbody>
+                  </table>
+            </div>
+
+        </div>
+
+    </body>
+
+</html>
